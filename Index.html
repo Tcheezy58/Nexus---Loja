@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXUS | Loja Oficial</title>
+
+<style>
+:root {
+  --preto: #080808;
+  --branco: #ffffff;
+  --cinza: #f3f3f3;
+  --cinza-texto: #777;
+  --borda: #e7e7e7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--branco);
+  color: var(--preto);
+}
+
+header {
+  background: #080808;
+  color: white;
+  padding: 22px 16px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 31px;
+  font-weight: 900;
+  letter-spacing: 7px;
+}
+
+.slogan {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 8px;
+  color: #ccc;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 15px 8px;
+  border-bottom: 1px solid var(--borda);
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero {
+  background: #080808;
+  color: white;
+  padding: 52px 22px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 35px;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 18px auto 25px;
+  max-width: 420px;
+}
+
+.botao {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.seccao {
+  padding: 35px 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 23px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: var(--cinza-texto);
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.produto {
+  border: 1px solid var(--borda);
+  background: white;
+  padding-bottom: 15px;
+  overflow: hidden;
+}
+
+.visual {
+  background: #f1f1f1;
+  aspect-ratio: 4 / 4.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.visual svg {
+  width: 100%;
+  height: 100%;
+  max-height: 240px;
+}
+
+.produto h3 {
+  font-size: 13px;
+  padding: 13px 10px 5px;
+}
+
+.descricao {
+  color: var(--cinza-texto);
+  font-size: 11px;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+
+.preco {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.encomendar {
+  display: block;
+  margin: 0 10px;
+  padding: 11px 5px;
+  background: #080808;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.encomendar:hover {
+  background: #333;
+}
+
+.faixa {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.faixa h2 {
+  font-size: 21px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.faixa p {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 480px;
+  margin: auto;
+}
+
+.botao-preto {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 22px;
+  background: #080808;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+footer {
+  background: #080808;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+footer .logo {
+  font-size: 23px;
+}
+
+footer p {
+  font-size: 11px;
+  color: #bbb;
+  line-height: 1.9;
+  margin-top: 12px;
+}
+
+footer a {
+  color: white;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    padding: 75px 20px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .seccao {
+    padding: 55px 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NEXUS</div>
+  <div class="slogan">ESTILO • IDENTIDADE • EVOLUÇÃO</div>
+</header>
+
+<nav>
+  <a href="#inicio">INÍCIO</a>
+  <a href="#produtos">PRODUTOS</a>
+  <a href="#contacto">CONTACTO</a>
+</nav>
+
+<section class="hero" id="inicio">
+  <h1>O TEU ESTILO.<br>A TUA IDENTIDADE.</h1>
+
+  <p>
+    Descobre a NEXUS: moda, elegância e criatividade
+    reunidas numa identidade única.
+  </p>
+
+  <a class="botao" href="#produtos">EXPLORAR COLECÇÃO</a>
+</section>
+
+<section class="seccao" id="produtos">
+
+  <h2 class="titulo">COLECÇÃO NEXUS</h2>
+
+  <p class="subtitulo">
+    Peças com identidade. Estilo sem limites.
+  </p>
+
+  <div class="produtos">
+
+    <!-- T-SHIRT -->
+
+    <article class="produto">
+
+      <div class="visual">
+        <svg viewBox="0 0 240 260"
+             role="img" aria-label="T-shirt preta Nexus">
+
+          <defs>
+            <linearGradient id="shirt1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#292929"/>
+              <stop offset="100%" stop-color="#080808"/>
+            </linearGradient>
+          </defs>
+
+          <path d="M83 35 L104 24 Q120 44 136 24 L157 35
+                   L204 64 L181 102 L158 89 L158 232
+                   L82 232 L82 89 L59 102 L36 64 Z"
+                fill="url(#shirt1)" stroke="#444" stroke-width="1.5"/>
+
+          <path d="M104 24 Q120 52 136 24"
+                fill="none" stroke="#777" stroke-width="3"/>
+
+          <text x="120" y="127" text-anchor="middle"
+                fill="#fff" font-size="18"
+                font-weight="900" letter-spacing="3">NEXUS</text>
+
+          <path d="M91 136 L149 136"
+                stroke="#fff" stroke-width="1"/>
+
+          <text x="120" y="149" text-anchor="middle"
+                fill="#bbb" font-size="5" letter-spacing="1.5">
+            EST. NEXUS
+          </text>
+
+        </svg>
+      </div>
+
+      <h3>T-shirt Essential</h3>
+      <p class="descricao">Preta, minimalista, com logótipo NEXUS.</p>
+      <p class="preco">5.000 Kz</p>
+
+      <a class="encomendar"
+         href="https://wa.me/244947238395?text=Ola%20NEXUS%2C%20quero%20encomendar%20a%20T-shirt%20Essential."
+         target="_blank">
+        ENCOMENDAR
+      </a
